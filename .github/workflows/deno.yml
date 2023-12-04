@@ -1,6 +1,11 @@
-version: 2
+
+name: Update README ⭐
+on:
+  schedule:
+    - cron: "51 */4 * * *"  # Every 4 hours
+  workflow_dispatch:
 jobs:
-  build:
+  runs-on: ubuntu-latest
     working_directory: ~/aoc-ranking
     docker:
       - image: cimg/python:3.11
